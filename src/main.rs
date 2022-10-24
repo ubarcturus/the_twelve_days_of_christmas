@@ -3,8 +3,8 @@ fn main() {
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
         "tenth", "eleventh", "twelfth",
     ];
-    let gifts_mirth_without_mischief = [
-        "a Partridge in a pear-tree",
+    let mirth_without_mischief_gifts = [
+        "a Partridge in a pear-tree.",
         "two Turtle doves, and",
         "three French hens,",
         "four Colly birds,",
@@ -17,4 +17,11 @@ fn main() {
         "eleven Ladies dancing,",
         "twelve Lords a leaping,",
     ];
+    for (i, ordinal_number) in ordinal_numbers.iter().enumerate() {
+        println!("The {ordinal_number} day of Christmas my true love sent to me");
+        for i in (0..=i).rev() {
+            println!("{}", mirth_without_mischief_gifts[i]);
+        }
+        println!();
+    }
 }
